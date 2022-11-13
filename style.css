@@ -3,6 +3,7 @@
 body {
   font-family: "Roboto Slab", serif;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .header {
@@ -49,9 +50,8 @@ span {
   flex-direction: row;
   justify-content: space-around;
 }
-
-#nameSubmit,
-#playerInpt {
+#secondPlayerInpt,
+#firsPlayerInpt {
   height: 3rem;
   border: 1px solid #815bc1;
   color: #1449df;
@@ -92,20 +92,6 @@ input {
   align-items: center;
 }
 
-p {
-  border: 1px solid #815bc1;
-  height: 4rem;
-  display: flex;
-  align-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 5px;
-  background-color: #fefae0;
-  color: black;
-}
-
 #diceImg {
   display: none;
   width: 9rem;
@@ -117,7 +103,8 @@ p {
   flex-direction: column;
 }
 
-#rollBtn {
+#rollBtn,
+#holdBtn {
   width: 8rem;
   height: 3rem;
   background-color: #83df12;
@@ -128,6 +115,12 @@ p {
 }
 #rollBtn:disabled,
 #rollBtn[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#holdBtn:disabled,
+#holdBtn[disabled] {
   background-color: #cccccc;
   cursor: not-allowed;
 }

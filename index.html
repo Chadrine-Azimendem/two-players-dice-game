@@ -12,41 +12,45 @@
 
 <body>
     <div class="container">
+
+        <!-- sounds links -->
+        <audio id="soundTrack">
+            <source src="./resouces/soundsAndvideos/soundTrack.mp3">
+        </audio>
+        <audio id="win">
+            <source src="./resouces/soundsAndvideos/winner.mp3">
+        </audio>
+        <audio id="lost">
+            <source src="./resouces/soundsAndvideos/failure-drum-sound.mp3">
+        </audio>
+        <audio id="good">
+            <source src="./resouces/soundsAndvideos/facemorethan3.mp3">
+        </audio>
+        <audio id="bad">
+            <source src="./resouces/soundsAndvideos/facelesthan3.mp3">
+        </audio>
+
         <div class="header">
             <span>Hello!!! Enter Your Names below to Start the dice Game.</span>
         </div>
         <div class="main">
             <div class="wrapper1">
 
-                <!-- sounds links -->
-                <audio id="win">
-                    <source src="./resouces/soundsAndvideos/winner.mp3">
-                </audio>
-                <audio id="lost">
-                    <source src="./resouces/soundsAndvideos/failure-drum-sound.mp3">
-                </audio>
-                <audio id="good">
-                    <source src="./resouces/soundsAndvideos/facemorethan3.mp3">
-                </audio>
-                <audio id="bad">
-                    <source src="./resouces/soundsAndvideos/facelesthan3.mp3">
-                </audio>
-                <!-- welcome label and name input form -->
-                <div class="player-inpt">
-                    <input id="playerInpt" type="text" placeholder="Player1">
-
-                </div>
-
-
+                <!--name input form -->
+                <input id="firsPlayerInpt" type="text" placeholder="Player1">
 
                 <!-- div for the players name -->
-                <div id="playersName"></div>
+                <div id="firstPlayersName"></div>
 
                 <!-- score count -->
                 <div class="score-rools-wrapper">
-                    <div id="score">
-                        <p>Score:</p>
-                        <p id="scoreCount"></p>
+                    <div id="totalOne">
+                        <p>Total</p>
+                        <p id="totalScoreOne">0</p>
+                    </div>
+                    <div id="scoreOne">
+                        <p>Current</p>
+                        <p id="currentScoreOne">0</p>
                     </div>
                 </div>
             </div>
@@ -57,47 +61,35 @@
                     <h6 class="stat-btn">Start</h6>
                 </div>
 
-                <!-- dice and roll button -->
+                <!-- dice and roll image -->
                 <img id="diceImg" src="" alt="dice">
 
                 <div class="roll-hold-btn">
                     <button type="submit" id="rollBtn">
                         <i class="fa-solid fa-rotate"></i>Roll
                     </button>
-                    <button type="submit" id="rollBtn"><i class="fa-solid fa-circle-pause"></i>Hold</button>
+                    <button type="submit" id="holdBtn"><i class="fa-solid fa-circle-pause"></i>Hold</button>
                 </div>
             </div>
+
             <div class="wrapper2">
 
-                <!-- sounds links -->
-                <audio id="win">
-                    <source src="./resouces/soundsAndvideos/winner.mp3">
-                </audio>
-                <audio id="lost">
-                    <source src="./resouces/soundsAndvideos/failure-drum-sound.mp3">
-                </audio>
-                <audio id="good">
-                    <source src="./resouces/soundsAndvideos/facemorethan3.mp3">
-                </audio>
-                <audio id="bad">
-                    <source src="./resouces/soundsAndvideos/facelesthan3.mp3">
-                </audio>
-                <!-- welcome label and name input form -->
-
-                <div class="player-inpt">
-                    <input id="playerInpt" type="text" placeholder="Player2">
-                </div>
+                <!-- Player2 name input form -->
+                <input id="secondPlayerInpt" type="text" placeholder="Player2">
 
                 <!-- div for the players name -->
-                <div id="playersName"></div>
+                <div id="secondPlayersName"></div>
 
                 <!-- score and rolls count -->
                 <div class="score-rools-wrapper">
-                    <div id="score">
-                        <p>Score:</p>
-                        <p id="scoreCount"></p>
+                    <div id="total2">
+                        <p>Total</p>
+                        <p id="totalScoreTwo">0</p>
                     </div>
-
+                    <div id="score2">
+                        <p>Current</p>
+                        <p id="currentScoreTwo">0</p>
+                    </div>
                 </div>
             </div>
 
