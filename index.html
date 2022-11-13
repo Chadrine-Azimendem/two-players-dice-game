@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2players Dice Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/5881489edb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Hello!!! Enter Your Names below to Start the dice Game.</span>
+        </div>
+        <div class="main">
+            <div class="wrapper1">
+
+                <!-- sounds links -->
+                <audio id="win">
+                    <source src="./resouces/soundsAndvideos/winner.mp3">
+                </audio>
+                <audio id="lost">
+                    <source src="./resouces/soundsAndvideos/failure-drum-sound.mp3">
+                </audio>
+                <audio id="good">
+                    <source src="./resouces/soundsAndvideos/facemorethan3.mp3">
+                </audio>
+                <audio id="bad">
+                    <source src="./resouces/soundsAndvideos/facelesthan3.mp3">
+                </audio>
+                <!-- welcome label and name input form -->
+                <div class="player-inpt">
+                    <input id="playerInpt" type="text" placeholder="Player1">
+
+                </div>
+
+
+
+                <!-- div for the players name -->
+                <div id="playersName"></div>
+
+                <!-- score count -->
+                <div class="score-rools-wrapper">
+                    <div id="score">
+                        <p>Score:</p>
+                        <p id="scoreCount"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-btn-wrapper">
+                <div id="startBtn">
+                    <i class="fa-solid fa-dice"></i>
+                    <h6 class="stat-btn">Start</h6>
+                </div>
+
+                <!-- dice and roll button -->
+                <img id="diceImg" src="" alt="dice">
+
+                <div class="roll-hold-btn">
+                    <button type="submit" id="rollBtn">
+                        <i class="fa-solid fa-rotate"></i>Roll
+                    </button>
+                    <button type="submit" id="rollBtn"><i class="fa-solid fa-circle-pause"></i>Hold</button>
+                </div>
+            </div>
+            <div class="wrapper2">
+
+                <!-- sounds links -->
+                <audio id="win">
+                    <source src="./resouces/soundsAndvideos/winner.mp3">
+                </audio>
+                <audio id="lost">
+                    <source src="./resouces/soundsAndvideos/failure-drum-sound.mp3">
+                </audio>
+                <audio id="good">
+                    <source src="./resouces/soundsAndvideos/facemorethan3.mp3">
+                </audio>
+                <audio id="bad">
+                    <source src="./resouces/soundsAndvideos/facelesthan3.mp3">
+                </audio>
+                <!-- welcome label and name input form -->
+
+                <div class="player-inpt">
+                    <input id="playerInpt" type="text" placeholder="Player2">
+                </div>
+
+                <!-- div for the players name -->
+                <div id="playersName"></div>
+
+                <!-- score and rolls count -->
+                <div class="score-rools-wrapper">
+                    <div id="score">
+                        <p>Score:</p>
+                        <p id="scoreCount"></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+<footer>
+
+    <p id="footer-p1">
+        Sound Effect from
+        <a
+            href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=7184">Pixabay</a>
+    </p>
+    <p id="footer-p2">
+        &copy Chadrine Azimendem 2022
+    </p>
+</footer>
+
+</html>
