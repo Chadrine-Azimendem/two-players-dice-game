@@ -14,7 +14,7 @@
     <div class="container">
 
         <!-- sounds links -->
-        <audio id="soundTrack">
+        <audio loop id="soundTrack">
             <source src="./resouces/soundsAndvideos/soundTrack.mp3">
         </audio>
         <audio id="win">
@@ -33,8 +33,10 @@
         <div class="header">
             <span>Hello!!! Enter Your Names below to Start the dice Game.</span>
         </div>
+
         <div class="main">
-            <div class="wrapper1">
+
+            <div class="wrapper1 wrapper">
 
                 <!--name input form -->
                 <input id="firsPlayerInpt" type="text" placeholder="Player1">
@@ -46,11 +48,11 @@
                 <div class="score-rools-wrapper">
                     <div id="totalOne">
                         <p>Total</p>
-                        <p id="totalScoreOne">0</p>
+                        <p class="tot" id="totalScoreOne">0</p>
                     </div>
                     <div id="scoreOne">
                         <p>Current</p>
-                        <p id="currentScoreOne">0</p>
+                        <p class="current-scr" id="currentScoreOne">0</p>
                     </div>
                 </div>
             </div>
@@ -72,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="wrapper2">
+            <div class="wrapper2 wrapper">
 
                 <!-- Player2 name input form -->
                 <input id="secondPlayerInpt" type="text" placeholder="Player2">
@@ -82,13 +84,13 @@
 
                 <!-- score and rolls count -->
                 <div class="score-rools-wrapper">
-                    <div id="total2">
+                    <div id="totalTwo">
                         <p>Total</p>
-                        <p id="totalScoreTwo">0</p>
+                        <p class="tot" id="totalScoreTwo">0</p>
                     </div>
-                    <div id="score2">
+                    <div id="scoreTwo">
                         <p>Current</p>
-                        <p id="currentScoreTwo">0</p>
+                        <p class="current-scr" id="currentScoreTwo">0</p>
                     </div>
                 </div>
             </div>
