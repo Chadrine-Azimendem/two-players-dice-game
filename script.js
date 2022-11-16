@@ -7,6 +7,10 @@ const holdBtn = document.getElementById("holdBtn");
 const firstPlayersName = document.getElementById("firstPlayersName");
 const secondPlayersName = document.getElementById("secondPlayersName");
 
+//get sounds
+const soundTrack = document.getElementById("soundTrack");
+const win = document.getElementById("win");
+
 // disable roll button
 rollBtn.disabled = true;
 holdBtn.disabled = true;
@@ -21,7 +25,6 @@ startBtn.addEventListener("click", () => {
   secondPlayerInpt.style.display = "none";
   rollBtn.disabled = false;
   holdBtn.disabled = false;
-  const soundTrack = document.getElementById("soundTrack");
   soundTrack.play();
   document.querySelector(".wrapper1").style.boxShadow =
     " 0px 2px 7px 14px #8bc34a";
@@ -94,10 +97,50 @@ let scores = () => {
 };
 
 // check who is the winner
-let winnerChecker = () => {};
+let winnerChecker = () => {
+  let Score = currentScore + totalScore;
+
+  if (
+    Score >= 20 &&
+    document.querySelector(".wrapper1").style.boxShadow !== "none"
+  ) {
+    firstPlayersName.innerText = "Congratulations, you win!!!";
+    document.querySelector(".wrapper2").style.boxShadow = "none";
+    rollBtn.disabled = true;
+    holdBtn.disabled = true;
+    firsPlayerInpt.style.display = "block";
+    secondPlayerInpt.style.display = "block";
+    currentScoreOne.innerText = 0;
+    currentScoreTwo.innerText = 0;
+    totalScoreOne.innerText = 0;
+    totalScoreOne.innerText = 0;
+    totalScoreTwo.innerText = 0;
+    win.play();
+    currentScore = 0;
+    totalScore = 0;
+  } else if (
+    Score >= 20 &&
+    document.querySelector(".wrapper1").style.boxShadow === "none"
+  ) {
+    secondPlayersName.innerText = "Congratulations, you win!!!";
+    document.querySelector(".wrapper2").style.boxShadow = "none";
+    rollBtn.disabled = true;
+    holdBtn.disabled = true;
+    firsPlayerInpt.style.display = "block";
+    secondPlayerInpt.style.display = "block";
+    currentScoreOne.innerText = 0;
+    currentScoreTwo.innerText = 0;
+    totalScoreOne.innerText = 0;
+    totalScoreTwo.innerText = 0;
+    win.play();
+    currentScore = 0;
+    totalScore = 0;
+  }
+};
 
 rollBtn.addEventListener("click", () => {
   scores();
+  winnerChecker();
 });
 
 holdBtn.addEventListener("click", () => {
